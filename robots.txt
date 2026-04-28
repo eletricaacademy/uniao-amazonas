@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /.htaccess
+
+Sitemap: https://www.uniaoamazonas.com.br/sitemap.xml

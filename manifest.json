@@ -1,0 +1,15 @@
+{
+  "name": "União para Transformar — CREA/CONFEA/Mútua AM",
+  "short_name": "União AM",
+  "description": "Chapa União para Transformar — eleições CREA/CONFEA/Mútua Amazonas 2026.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F9C81E",
+  "theme_color": "#1B3A78",
+  "lang": "pt-BR",
+  "icons": [
+    { "src": "/img/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
