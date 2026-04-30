@@ -1239,7 +1239,7 @@ section {
 
 /* ========== CHAPA BANNER (faixa dos 5 candidatos juntos) ========== */
 .chapa-banner {
-  background: linear-gradient(180deg, #000000 0%, var(--azul-escuro) 100%);
+  background: var(--azul-escuro);
   color: var(--branco);
   position: relative;
   overflow: hidden;
@@ -1342,9 +1342,15 @@ section {
   width: 100%;
   height: auto;
   display: block;
-  /* Suaviza bordas laterais pra fundir com o fundo */
-  mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  /* Suaviza bordas laterais e inferior pra fundir com o fundo */
+  mask-image:
+    linear-gradient(180deg, #000 0%, #000 80%, transparent 100%),
+    linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  mask-composite: intersect;
+  -webkit-mask-image:
+    linear-gradient(180deg, #000 0%, #000 80%, transparent 100%),
+    linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  -webkit-mask-composite: source-in;
 }
 
 .chapa-banner__nomes {
@@ -1393,8 +1399,12 @@ section {
     display: none;
   }
   .chapa-banner__photo img {
-    mask-image: linear-gradient(90deg, transparent 0%, #000 4%, #000 96%, transparent 100%);
-    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 4%, #000 96%, transparent 100%);
+    mask-image:
+      linear-gradient(180deg, #000 0%, #000 80%, transparent 100%),
+      linear-gradient(90deg, transparent 0%, #000 4%, #000 96%, transparent 100%);
+    -webkit-mask-image:
+      linear-gradient(180deg, #000 0%, #000 80%, transparent 100%),
+      linear-gradient(90deg, transparent 0%, #000 4%, #000 96%, transparent 100%);
   }
 }
 
